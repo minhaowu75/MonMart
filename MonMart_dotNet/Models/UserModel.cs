@@ -38,11 +38,6 @@ namespace MonMart.Models
         public string Email { get; set; } = string.Empty;
 
         /// <summary>
-        /// Trade status of the user.
-        /// </summary>
-        public bool TradeStatus { get; set; }
-
-        /// <summary>
         /// Phone number of the user.
         /// </summary>
         public int PhoneNumber { get; set; }
@@ -53,9 +48,30 @@ namespace MonMart.Models
         public DateOnly Birthday { get; set; }
 
         /// <summary>
+        /// Trade status of the user.
+        /// </summary>
+        public bool TradeStatus { get; set; }
+
+        /// <summary>
         /// List of cards that the user owns.
         /// </summary>
         public List<CardModel> Cards { get; set; } = new List<CardModel>();
 
+        public UserModel()
+        {
+
+        }
+
+        public UserModel(string firstname, string lastname, string username, string password, int age, string email, int phonenumber, DateOnly birthday)
+        {
+            this.FirstName = firstname;
+            this.LastName = lastname;
+            this.Username = username;
+            this.Password = password;
+            this.Age = age;
+            this.Email = email;
+            this.PhoneNumber = phonenumber;
+            this.Birthday = birthday;
+        }
     }
 }
