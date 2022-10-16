@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\g\\MonMart\\MonMart_dotNet\\Models\\Models.csproj": {}
+    "C:\\dev\\g\\MonMart\\MonMart_dotNet\\Models\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\dev\\g\\MonMart\\MonMart_dotNet\\Models\\Models.csproj": {
+    "C:\\dev\\g\\MonMart\\MonMart_dotNet\\Models\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\g\\MonMart\\MonMart_dotNet\\Models\\Models.csproj",
-        "projectName": "Models",
-        "projectPath": "C:\\dev\\g\\MonMart\\MonMart_dotNet\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\dev\\g\\MonMart\\MonMart_dotNet\\Models\\WebAPI.csproj",
+        "projectName": "WebAPI",
+        "projectPath": "C:\\dev\\g\\MonMart\\MonMart_dotNet\\Models\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\micwu\\.nuget\\packages\\",
         "outputPath": "C:\\dev\\g\\MonMart\\MonMart_dotNet\\Models\\obj\\",
         "projectStyle": "PackageReference",
@@ -45,6 +45,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
