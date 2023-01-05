@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[6.0.10, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            },
             "Npgsql": {
               "target": "Package",
               "version": "[6.0.7, )"
@@ -55,6 +59,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.1, )"
             }
           },
           "imports": [

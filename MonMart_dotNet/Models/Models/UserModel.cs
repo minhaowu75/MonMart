@@ -8,6 +8,11 @@ namespace MonMart.Models
     public class UserModel
     {
         /// <summary>
+        /// Id of the user.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// First name of the user.
         /// </summary>
         public string FirstName { get; set; } = string.Empty;
