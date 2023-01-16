@@ -42,12 +42,14 @@ namespace MonMart.Controllers
             return Ok(token);
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult<IEnumerable<UserDTO>> Get()
         {
             return Ok(_userRepository.GetAll());
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public ActionResult<UserDTO> Get(int id)
         {

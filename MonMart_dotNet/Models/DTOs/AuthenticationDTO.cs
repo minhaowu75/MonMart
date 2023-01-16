@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace MonMart.DTOs
@@ -15,6 +16,7 @@ namespace MonMart.DTOs
         /// <summary>
         /// Password of the user.
         /// </summary>
+        [JsonIgnore]
         public string Password { get; set; } = string.Empty;
     }
 }

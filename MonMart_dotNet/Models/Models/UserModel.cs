@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 
 namespace MonMart.Models
 {
@@ -30,6 +31,7 @@ namespace MonMart.Models
         /// <summary>
         /// Password for the user account.
         /// </summary>
+        [JsonIgnore]
         public string Password { get; set; } = string.Empty;
 
         /// <summary>
