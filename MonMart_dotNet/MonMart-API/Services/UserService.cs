@@ -12,7 +12,7 @@ namespace MonMart.Services
     public class UserService : IUserService
     {
         // Placeholder for a db.
-        private List<UserModel> _users = new List<UserModel>
+        private readonly List<UserModel> _users = new List<UserModel>
         {
             new UserModel { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
         };
@@ -23,7 +23,7 @@ namespace MonMart.Services
             _appSettings = appSettings.Value;
         }
 
-        public string? Authenticate(AuthenticationDTO authenticationDTO)
+        public UserDTO Authenticate(AuthenticationDTO authenticationDTO)
         {
             var user = _users.SingleOrDefault(x => x.Username == authenticationDTO.UserName && x.Password == authenticationDTO.Password);
 
@@ -34,7 +34,7 @@ namespace MonMart.Services
 
             var token = GenerateJWTToken(user);
 
-            return token;
+            return new UserDTO(user, token);
         }
 
         public IEnumerable<UserModel> GetAll()

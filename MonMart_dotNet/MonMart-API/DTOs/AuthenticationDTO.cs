@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace MonMart.DTOs
 {
@@ -11,12 +7,13 @@ namespace MonMart.DTOs
         /// <summary>
         /// Username of the user.
         /// </summary>
-        public string UserName { get; set; } = string.Empty;
+        [Required]
+        public string UserName { get; set; }
 
         /// <summary>
         /// Password of the user.
         /// </summary>
-        [JsonIgnore]
-        public string Password { get; set; } = string.Empty;
+        [Required]
+        public string Password { get; set; }
     }
 }

@@ -1,22 +1,13 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using MonMart.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using MonMart.DTOs;
 using MonMart.Services;
-using Npgsql;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Data;
+using MonMart.Utilities;
 
 namespace MonMart.Controllers
 {
     [ApiController]
-    public class AuthenticationController : Controller
+    [Route("[controller]")]
+    public class AuthenticationController : ControllerBase
     {
         private readonly IUserService _userService;
         
@@ -25,15 +16,14 @@ namespace MonMart.Controllers
             _userService = userService;
         }
 
-        [AllowAnonymous]
-        [HttpPost("Login")]
-        public IActionResult Login(AuthenticationDTO authenticationDTO)
+        [HttpPost("authenticate")]
+        public IActionResult Authenticate(AuthenticationDTO authenticationDTO)
         {
             var token = _userService.Authenticate(authenticationDTO);
 
             if (token == null)
             {
-                return Unauthorized();
+                return BadRequest(new { message = "Username or password is incorrect" });
             }
 
             return Ok(token);
@@ -43,20 +33,21 @@ namespace MonMart.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok(_userService.GetAll());
+            var users = _userService.GetAll();
+            return Ok(users);
         }
 
-        [Authorize]
-        [HttpGet("{id}")]
-        public ActionResult<UserDTO> Get(int id)
-        {
-            UserModel user = _userService.GetByUserId(id);
-            if (user != null)
-            {
-                return Ok(new UserDTO() { Id = user.Id, FirstName = user.FirstName, LastName = user.LastName, Email = user.Email });
-            }
+        //[Authorize]
+        //[HttpGet("{id}")]
+        //public ActionResult<UserDTO> Get(int id)
+        //{
+        //    UserModel user = _userService.GetByUserId(id);
+        //    if (user != null)
+        //    {
+        //        return Ok(new UserDTO() { Id = user.Id, FirstName = user.FirstName, LastName = user.LastName, Email = user.Email, Token =  });
+        //    }
 
-            return NotFound();
-        }
+        //    return NotFound();
+        //}
     }
 }

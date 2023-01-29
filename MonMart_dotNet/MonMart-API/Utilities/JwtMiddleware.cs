@@ -6,10 +6,13 @@ using System.Text;
 
 namespace MonMart.Utilities
 {
+    /// <summary>
+    /// This 
+    /// </summary>
     public class JwtMiddleware
     {
         private readonly RequestDelegate _requestDelegate;
-        private AppSettings _appSettings;
+        private readonly AppSettings _appSettings;
 
         public JwtMiddleware(RequestDelegate requestDelegate, IOptions<AppSettings> appSettings)
         {
@@ -22,9 +25,7 @@ namespace MonMart.Utilities
             var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
 
             if (token != null)
-            {
                 AttachUserToContext(context, userService, token);
-            }
 
             await _requestDelegate(context);
         }

@@ -1,5 +1,5 @@
-﻿using MonMart.Utilities;
-using MonMart.Services;
+﻿using MonMart.Services;
+using MonMart.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,9 +17,9 @@ var app = builder.Build();
 
 {
     app.UseCors(x => x
-    .AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader());
+        .AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
 
     app.UseMiddleware<JwtMiddleware>();
 
