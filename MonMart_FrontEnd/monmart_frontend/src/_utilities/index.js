@@ -1,2 +1,2 @@
-export * from './fetch-wrapper';
+export * from './fetch_wrapper';
 export * from './history';

@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "/yCFOrDHb8EZQiNE3bR0snZyp3DVUrdlJYKp00kQUvg=",
-  "Source": "MonMart-API",
-  "BasePath": "_content/MonMart-API",
+  "Hash": "8vJJTAi7KyonP8z6/MntT6UIueIzgpysfZikROBmUjc=",
+  "Source": "MonMart_API",
+  "BasePath": "_content/MonMart_API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil';
-import { history } from '_helpers';
+import { history } from '_utilities';
 import { authAtom } from '_state';
 
 export { useFetchWrapper };
@@ -8,8 +8,7 @@ function useFetchWrapper()
 {
     const [auth, setAuth] = useRecoilState(authAtom);
 
-    return
-    {
+    return {
         get: request('GET'),
         post: request('POST'),
         put: request('PUT'),

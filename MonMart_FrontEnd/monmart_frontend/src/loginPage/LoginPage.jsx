@@ -6,9 +6,9 @@ import { useRecoilValue } from 'recoil';
 import { authAtom } from '_state';
 import { useUserActions } from '_actions';
 
-export { Login };
+export { LoginPage };
 
-function Login({ history }) {
+function LoginPage({ history }) {
     const auth = useRecoilValue(authAtom);
     const userActions = useUserActions();
 
@@ -32,7 +32,7 @@ function Login({ history }) {
     function onSubmit({ username, password }) {
         return userActions.login(username, password)
             .catch(error => {
-                setError('apiError', { message: error })
+                setError('apiError', { message: error });
             });
     }
 

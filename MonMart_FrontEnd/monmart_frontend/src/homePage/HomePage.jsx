@@ -3,15 +3,15 @@ import { useRecoilValue } from 'recoil';
 import { authAtom, usersAtom } from '_state';
 import { useUserActions } from '_actions';
 
-export { Home };
+export { HomePage };
 
-function Home() {
+function HomePage() {
     const auth = useRecoilValue(authAtom);
     const users = useRecoilValue(usersAtom);
     const userActions = useUserActions();
 
     useEffect(() => {
-        userActions.getAll();
+        userActions.getAllUsers();
         
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

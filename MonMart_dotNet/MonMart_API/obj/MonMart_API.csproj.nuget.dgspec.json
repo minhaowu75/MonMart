@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart-API\\MonMart_API.csproj": {}
+    "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart_API\\MonMart_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart-API\\MonMart_API.csproj": {
+    "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart_API\\MonMart_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart-API\\MonMart_API.csproj",
+        "projectUniqueName": "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart_API\\MonMart_API.csproj",
         "projectName": "MonMart_API",
-        "projectPath": "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart-API\\MonMart_API.csproj",
+        "projectPath": "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart_API\\MonMart_API.csproj",
         "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart-API\\obj\\",
+        "outputPath": "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",

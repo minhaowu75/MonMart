@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0tXh/huVt2ui07czAS5LfAHMVCs1hyE4gkokfHKB+nJBScOnYskT9Sgbec57IPgegiB5u+OdPjQq9BLVZ5B2jg==",
+  "dgSpecHash": "v740mkPSCVdXs7a5QiseBO581r50G/Yq0hV4XEXsSkvZsJnmWvdGeQN49c4YZPEQXoBDh6JPkUim8hJ6DFAtBg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart-API\\MonMart_API.csproj",
+  "projectFilePath": "C:\\Users\\Michael\\source\\repos\\MonMart\\MonMart_dotNet\\MonMart_API\\MonMart_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
