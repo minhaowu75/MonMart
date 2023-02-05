@@ -29,11 +29,12 @@ function LoginPage({ history }) {
     const { register, handleSubmit, setError, formState } = useForm(formOptions);
     const { errors, isSubmitting } = formState;
 
-    function onSubmit({ username, password }) {
-        return userActions.login(username, password)
-            .catch(error => {
-                setError('apiError', { message: error });
-            });
+    async function onSubmit({ username, password }) {
+        try {
+            return await userActions.login(username, password);
+        } catch (error) {
+            setError('apiError', { message: error });
+        }
     }
 
     return (
